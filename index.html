@@ -5,422 +5,123 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-					<head>
-				    <title>Automation Alchemy - Efficient Automation Solutions</title>
-				    <meta charset="utf-8" />
-				    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-				    <meta name="description" content="Transform your business with intelligent automation solutions that save time and boost productivity" />
-				    <link rel="stylesheet" href="assets/css/main.css" />
-				    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-				    
-				    <!-- Custom CSS for Automation Alchemy -->
-				    <style>
-				        /* Workflow Visualization */
-				        .workflow-visual {
-				            margin: 2rem 0;
-				            padding: 1.5rem;
-				            background: rgba(255,255,255,0.1);
-				            border-radius: 10px;
-				        }
-				        
-				        .workflow-steps {
-				            display: flex;
-				            align-items: center;
-				            justify-content: space-between;
-				            margin: 1.5rem 0;
-				        }
-				        
-				        .step {
-				            text-align: center;
-				            flex: 1;
-				        }
-				        
-				        .step .icon {
-				            font-size: 2rem;
-				            margin-bottom: 0.5rem;
-				            display: block;
-				        }
-				        
-				        .step-arrow {
-				            font-size: 1.5rem;
-				            color: #fff;
-				            margin: 0 1rem;
-				        }
-				        
-				        /* Results Metrics */
-				        .results-metrics {
-				            display: flex;
-				            justify-content: space-between;
-				            margin-top: 2rem;
-				        }
-				        
-				        .metric {
-				            text-align: center;
-				            flex: 1;
-				            padding: 1rem;
-				        }
-				        
-				        .metric h4 {
-				            margin-bottom: 0.5rem;
-				            color: #fff;
-				        }
-				        
-				        /* Case Studies */
-				        .case-study {
-				            background: rgba(255,255,255,0.05);
-				            margin: 2rem 0;
-				            padding: 2rem;
-				            border-radius: 10px;
-				            border-left: 4px solid #4ECDC4;
-				        }
-				        
-				        .case-stats {
-				            display: flex;
-				            justify-content: space-around;
-				            margin: 1.5rem 0;
-				        }
-				        
-				        .stat {
-				            text-align: center;
-				        }
-				        
-				        .stat strong {
-				            display: block;
-				            font-size: 2rem;
-				            color: #4ECDC4;
-				        }
-				        
-				        .case-content p {
-				            margin: 1rem 0;
-				            line-height: 1.6;
-				        }
-						/* Case Studies Grid Layout */
-						.case-studies-grid {
-						    display: grid;
-						    grid-template-columns: repeat(2, 1fr);
-						    gap: 2rem;
-						    margin: 2rem 0;
-						}
-						
-						.case-study {
-						    background: rgba(255,255,255,0.05);
-						    padding: 1.5rem;
-						    border-radius: 10px;
-						    border-left: 4px solid #4ECDC4;
-						    transition: transform 0.3s ease;
-						}
-						
-						.case-study:hover {
-						    transform: translateY(-5px);
-						}
-						
-						.case-stats {
-						    display: flex;
-						    justify-content: space-around;
-						    margin: 1rem 0;
-						}
-						
-						.stat {
-						    text-align: center;
-						}
-						
-						.stat strong {
-						    display: block;
-						    font-size: 1.8rem;
-						    color: #4ECDC4;
-						}
-						
-						.stat span {
-						    font-size: 0.9rem;
-						    opacity: 0.8;
-						}
-						
-						.case-content p {
-						    margin: 0.8rem 0;
-						    line-height: 1.5;
-						    font-size: 0.95rem;
-						}
-						
-						/* Image Grid Layout */
-						.image-grid {
-						    display: grid;
-						    grid-template-columns: repeat(2, 1fr);
-						    gap: 2rem;
-						    margin: 2rem 0;
-						}
-						
-						.image-item {
-						    position: relative;
-						    border-radius: 10px;
-						    overflow: hidden;
-						    background: rgba(255,255,255,0.1);
-						    transition: transform 0.3s ease;
-						}
-						
-						.image-item:hover {
-						    transform: scale(1.05);
-						}
-						
-						.image-item img {
-						    width: 100%;
-						    height: 200px;
-						    object-fit: cover;
-						}
-						
-						.image-caption {
-						    padding: 1rem;
-						    text-align: center;
-						}
-						
-						.image-caption h4 {
-						    margin-bottom: 0.5rem;
-						    color: #fff;
-						}
-						
-						.image-caption p {
-						    font-size: 0.9rem;
-						    opacity: 0.8;
-						    margin: 0;
-						}
-						
-						/* Responsive Design */
-						@media (max-width: 736px) {
-						    .case-studies-grid,
-						    .image-grid {
-						        grid-template-columns: 1fr;
-						    }
-						    
-						    .workflow-steps {
-						        flex-direction: column;
-						    }
-						    
-						    .step-arrow {
-						        transform: rotate(90deg);
-						        margin: 1rem 0;
-						    }
-						/* Simplified Image Grid */
-						.image-grid-simple {
-						    display: grid;
-						    grid-template-columns: repeat(2, 1fr);
-						    gap: 2rem;
-						    margin: 2rem 0;
-						    max-width: 800px;
-						    margin-left: auto;
-						    margin-right: auto;
-						}
-						
-						.image-grid-simple .image-item {
-						    background: rgba(255,255,255,0.1);
-						    border-radius: 10px;
-						    overflow: hidden;
-						    transition: transform 0.3s ease;
-						}
-						
-						.image-grid-simple .image-item:hover {
-						    transform: scale(1.05);
-						}
-						
-						.image-grid-simple .image-item img {
-						    width: 100%;
-						    height: 180px;
-						    object-fit: cover;
-						}
-						
-						.image-grid-simple .image-caption {
-						    padding: 1.5rem;
-						    text-align: center;
-						}
-						
-						/* Keep your existing workflow styles */
-						.workflow-visual, .workflow-steps, .step, .results-metrics {
-						    /* Your existing styles remain */
-						}
-						
-						@media (max-width: 736px) {
-						    .image-grid-simple {
-						        grid-template-columns: 1fr;
-						    }
-							/* Compact Results Section */
-						.compact-workflow {
-						    margin: 2rem 0;
-						}
-						
-						.workflow-line {
-						    display: flex;
-						    align-items: center;
-						    justify-content: space-between;
-						    margin-bottom: 2rem;
-						}
-						
-						.workflow-item {
-						    display: flex;
-						    align-items: center;
-						    text-align: left;
-						    flex: 1;
-						}
-						
-						.workflow-icon {
-						    font-size: 2rem;
-						    margin-right: 1rem;
-						    min-width: 50px;
-						}
-						
-						.workflow-text {
-						    display: flex;
-						    flex-direction: column;
-						}
-						
-						.workflow-text strong {
-						    font-size: 1.1em;
-						    margin-bottom: 0.2rem;
-						}
-						
-						.workflow-text span {
-						    font-size: 0.9em;
-						    opacity: 0.8;
-						}
-						
-						.workflow-arrow {
-						    font-size: 1.5rem;
-						    color: #fff;
-						    margin: 0 0.5rem;
-						    opacity: 0.7;
-						}
-						
-						/* Compact Metrics */
-						.compact-metrics {
-						    display: flex;
-						    justify-content: space-between;
-						    gap: 1rem;
-						}
-						
-						.metric-box {
-						    text-align: center;
-						    flex: 1;
-						    padding: 1rem;
-						    background: rgba(255,255,255,0.1);
-						    border-radius: 8px;
-						}
-						
-						.metric-number {
-						    font-size: 1.8rem;
-						    font-weight: bold;
-						    color: #4ECDC4;
-						    margin-bottom: 0.5rem;
-						}
-						
-						.metric-label {
-						    font-size: 0.9rem;
-						    opacity: 0.9;
-						}
-						
-						/* Work Showcase */
-						.work-showcase {
-						    display: grid;
-						    grid-template-columns: repeat(2, 1fr);
-						    gap: 2rem;
-						    margin: 2rem 0;
-						}
-						
-						.work-item {
-						    position: relative;
-						}
-						
-						.work-image {
-						    position: relative;
-						    border-radius: 10px;
-						    overflow: hidden;
-						    height: 250px;
-						}
-						
-						.work-image img {
-						    width: 100%;
-						    height: 100%;
-						    object-fit: cover;
-						}
-						
-						.work-overlay {
-						    position: absolute;
-						    bottom: 0;
-						    left: 0;
-						    right: 0;
-						    background: linear-gradient(transparent, rgba(0,0,0,0.8));
-						    color: white;
-						    padding: 1.5rem;
-						    text-align: center;
-						}
-						
-						.work-overlay h4 {
-						    margin-bottom: 0.5rem;
-						    font-size: 1.2em;
-						}
-						
-						.work-overlay p {
-						    margin: 0;
-						    opacity: 0.9;
-						    font-size: 0.95em;
-						}
-						
-						/* Quick Stats */
-						.quick-stats {
-						    display: flex;
-						    justify-content: space-between;
-						    gap: 1rem;
-						    margin-top: 2rem;
-						}
-						
-						.stat-item {
-						    display: flex;
-						    align-items: center;
-						    flex: 1;
-						    background: rgba(255,255,255,0.05);
-						    padding: 1rem;
-						    border-radius: 8px;
-						}
-						
-						.stat-icon {
-						    font-size: 1.5rem;
-						    margin-right: 1rem;
-						}
-						
-						.stat-content {
-						    display: flex;
-						    flex-direction: column;
-						}
-						
-						.stat-content strong {
-						    font-size: 1.1em;
-						    margin-bottom: 0.2rem;
-						}
-						
-						.stat-content span {
-						    font-size: 0.9em;
-						    opacity: 0.8;
-						}
-						
-						/* Responsive */
-						@media (max-width: 736px) {
-						    .workflow-line {
-						        flex-direction: column;
-						        gap: 1rem;
-						    }
-						    
-						    .workflow-arrow {
-						        transform: rotate(90deg);
-						        margin: 0.5rem 0;
-						    }
-						    
-						    .compact-metrics,
-						    .quick-stats {
-						        flex-direction: column;
-						    }
-						    
-						    .work-showcase {
-						        grid-template-columns: 1fr;
-						    }
-						}
-				    </style>
-				</head>
+	<head>
+		<title>Automation Alchemy - Efficient Automation Solutions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Transform your business with intelligent automation solutions that save time and boost productivity" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Custom CSS for Automation Alchemy -->
+		<style>
+			/* Workflow Styles */
+			.workflow-showcase {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			
+			.workflow-card {
+				background: rgba(255,255,255,0.05);
+				border-radius: 10px;
+				padding: 1.5rem;
+				text-align: center;
+				border-top: 4px solid #4ECDC4;
+			}
+			
+			.workflow-steps {
+				display: flex;
+				flex-direction: column;
+				gap: 0.8rem;
+				margin: 1rem 0;
+			}
+			
+			.workflow-step {
+				display: flex;
+				align-items: center;
+				gap: 0.8rem;
+				padding: 0.8rem;
+				background: rgba(255,255,255,0.1);
+				border-radius: 6px;
+				font-size: 0.9rem;
+			}
+			
+			.step-icon {
+				font-size: 1.2rem;
+				min-width: 30px;
+			}
+			
+			.step-arrow {
+				font-size: 1rem;
+				color: #4ECDC4;
+				margin: 0 0.3rem;
+			}
+			
+			/* Dashboard Preview */
+			.dashboard-preview {
+				background: rgba(255,255,255,0.1);
+				border-radius: 10px;
+				padding: 1.5rem;
+				margin: 1.5rem 0;
+			}
+			
+			.dashboard-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+				margin-top: 1rem;
+			}
+			
+			.dashboard-item {
+				background: rgba(255,255,255,0.05);
+				padding: 1rem;
+				border-radius: 6px;
+				text-align: center;
+			}
+			
+			.dashboard-metric {
+				font-size: 1.5rem;
+				font-weight: bold;
+				color: #4ECDC4;
+				margin-bottom: 0.5rem;
+			}
+			
+			/* Benefits Grid */
+			.benefits-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			
+			.benefit-item {
+				background: rgba(255,255,255,0.05);
+				padding: 1.5rem;
+				border-radius: 10px;
+				text-align: center;
+				border-left: 4px solid #4ECDC4;
+			}
+			
+			.benefit-icon {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			
+			/* Responsive */
+			@media (max-width: 736px) {
+				.workflow-showcase,
+				.benefits-grid {
+					grid-template-columns: 1fr;
+				}
+				
+				.dashboard-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
 	<body class="is-preload">
 
 		<!-- Page Wrapper -->
@@ -429,360 +130,247 @@
 				<!-- Wrapper -->
 					<div id="wrapper">
 
-						<!-- Panel (Banner) -->
+						<!-- PAGE 1: Welcome -->
 						<section class="panel banner right">
-						    <div class="content color0 span-3-75">
-						        <h1 class="major">Welcome to<br />Automation Alchemy</h1>
-						        <p>We transform complex business processes into <strong>streamlined automated workflows</strong>. Save time, reduce errors, and unlock new levels of productivity.</p>
-						        <ul class="actions">
-						            <li><a href="#services" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-						        </ul>
-						    </div>
-						    <div class="image filtered span-1-75" data-position="25% 25%">
-						        <img src="images/pic01.jpg" alt="Automation Solutions" />
-						    </div>
+							<div class="content color0 span-3-75">
+								<h1 class="major">Welcome to<br />Automation Alchemy</h1>
+								<p>We transform complex business processes into <strong>streamlined automated workflows</strong>. Save time, reduce errors, and unlock new levels of productivity.</p>
+								<ul class="actions">
+									<li><a href="#services" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
+								</ul>
+							</div>
+							<div class="image filtered span-1-75" data-position="25% 25%">
+								<img src="images/pic01.jpg" alt="Automation Solutions" />
+							</div>
 						</section>
 						
-						<!-- Panel - Our Services -->
+						<!-- PAGE 2: Our Services -->
 						<section class="panel color1" id="services">
-						    <div class="intro joined">
-						        <h2 class="major">Our Services</h2>
-						        <p>We offer comprehensive automation solutions designed to transform how you work.</p>
-						    </div>
-						    <div class="inner">
-						        <ul class="grid-icons three connected">
-						            <li><span class="icon solid fa-cog"><span class="label">Workflow Automation</span></span></li>
-						            <li><span class="icon solid fa-chart-line"><span class="label">Process Optimization</span></span></li>
-						            <li><span class="icon solid fa-robot"><span class="label">AI Solutions</span></span></li>
-						            <li><span class="icon solid fa-database"><span class="label">Data Management</span></span></li>
-						            <li><span class="icon solid fa-cloud"><span class="label">Cloud Integration</span></span></li>
-						            <li><span class="icon solid fa-code"><span class="label">Custom Development</span></span></li>
-						        </ul>
-						    </div>
+							<div class="intro joined">
+								<h2 class="major">Our Services</h2>
+								<p>We offer comprehensive automation solutions designed to transform how you work.</p>
+							</div>
+							<div class="inner">
+								<ul class="grid-icons three connected">
+									<li><span class="icon solid fa-cog"><span class="label">Workflow Automation</span></span></li>
+									<li><span class="icon solid fa-chart-line"><span class="label">Process Optimization</span></span></li>
+									<li><span class="icon solid fa-robot"><span class="label">AI Solutions</span></span></li>
+									<li><span class="icon solid fa-database"><span class="label">Data Management</span></span></li>
+									<li><span class="icon solid fa-cloud"><span class="label">Cloud Integration</span></span></li>
+									<li><span class="icon solid fa-code"><span class="label">Custom Development</span></span></li>
+								</ul>
+							</div>
 						</section>
 
-						<!-- Panel - Results -->
-							<section class="panel spotlight medium right">
-							    <div class="content span-7">
-							        <h2 class="major" style="font-size: 2em; margin-bottom: 1.5rem;">Results</h2>
-							        
-					  <!-- Compact Workflow -->
-							        <div class="compact-workflow">
-							            <div class="workflow-line">
-							                <div class="workflow-item">
-							                    <div class="workflow-icon">📧</div>
-							                    <div class="workflow-text">
-							                        <strong>Email Inbox</strong>
-							                        <span>Customer inquiries arrive</span>
-							                    </div>
-							                </div>
-							                <div class="workflow-arrow">→</div>
-							                <div class="workflow-item">
-							                    <div class="workflow-icon">🤖</div>
-							                    <div class="workflow-text">
-							                        <strong>AI Processing</strong>
-							                        <span>Automated classification & routing</span>
-							                    </div>
-							                </div>
-							                <div class="workflow-arrow">→</div>
-							                <div class="workflow-item">
-							                    <div class="workflow-icon">⚡</div>
-							                    <div class="workflow-text">
-							                        <strong>Real Results</strong>
-							                        <span>80% faster response times</span>
-							                    </div>
-							                </div>
-							            </div>
-							        </div>
-							
-							        <!-- Compact Metrics -->
-							        <div class="compact-metrics">
-							            <div class="metric-box">
-							                <div class="metric-number">15+</div>
-							                <div class="metric-label">hours saved weekly</div>
-							            </div>
-							            <div class="metric-box">
-							                <div class="metric-number">45%</div>
-							                <div class="metric-label">lower operational costs</div>
-							            </div>
-							            <div class="metric-box">
-							                <div class="metric-number">99.7%</div>
-							                <div class="metric-label">error-free processing</div>
-							            </div>
-							        </div>
-							    </div>
-							    <div class="image filtered tinted" data-position="top left">
-							        <img src="images/pic02.jpg" alt="Automation Results" />
-							    </div>
-							</section>
-						<!-- Panel (Spotlight) -->
-							<section class="panel spotlight large left">
-							    <div class="content span-5">
-							        <h2 class="major">Proven Results</h2>
-							        <p>Our clients typically see <strong>40-80% reduction</strong> in manual processing time, <strong>99% error elimination</strong> in automated tasks, and <strong>significant cost savings</strong> within the first 3 months.</p>
-							        
-							        <!-- Visual Workflow -->
-							        <div class="workflow-visual">
-							            <h3>📧 Email Processing → 🤖 Automation → 📊 Results</h3>
-							            <div class="workflow-steps">
-							                <div class="step">
-							                    <span class="icon solid fa-envelope"></span>
-							                    <strong>Email Inbox</strong>
-							                    <p>Customer inquiries arrive</p>
-							                </div>
-							                <div class="step-arrow">→</div>
-							                <div class="step">
-							                    <span class="icon solid fa-robot"></span>
-							                    <strong>AI Processing</strong>
-							                    <p>Automated classification & routing</p>
-							                </div>
-							                <div class="step-arrow">→</div>
-							                <div class="step">
-							                    <span class="icon solid fa-chart-line"></span>
-							                    <strong>Real Results</strong>
-							                    <p>80% faster response times</p>
-							                </div>
-							            </div>
-							        </div>
-							
-							        <div class="results-metrics">
-							            <div class="metric">
-							                <h4>⏱️ Time Saved</h4>
-							                <p>15+ hours weekly per employee</p>
-							            </div>
-							            <div class="metric">
-							                <h4>💸 Cost Reduction</h4>
-							                <p>45% lower operational costs</p>
-							            </div>
-							            <div class="metric">
-							                <h4>🎯 Accuracy</h4>
-							                <p>99.7% error-free processing</p>
-							            </div>
-							        </div>
-							    </div>
-							    <div class="image filtered tinted" data-position="top right">
-							        <img src="images/pic03.jpg" alt="Business Results" />
-							    </div>
-							</section>
-						<!-- Panel -->
-						<!-- Panel - Our Work in Action -->
-							<section class="panel color2">
-							    <div class="intro color2">
-							        <h2 class="major">Our Work in Action</h2>
-							        <p>Automation solutions transforming business operations</p>
-							    </div>
-							    <div class="inner">
-							        <div class="work-showcase">
-							            <div class="work-item">
-							                <div class="work-image">
-							                    <img src="images/gallery/thumbs/01.jpg" alt="Data Integration" />
-							                    <div class="work-overlay">
-							                        <h4>🔗 Data Integration</h4>
-							                        <p>Connecting systems for unified operations</p>
-							                    </div>
-							                </div>
-							            </div>
-							            <div class="work-item">
-							                <div class="work-image">
-							                    <img src="images/gallery/thumbs/02.jpg" alt="AI Processing" />
-							                    <div class="work-overlay">
-							                        <h4>🤖 AI Processing</h4>
-							                        <p>Intelligent document analysis</p>
-							                    </div>
-							                </div>
-							            </div>
-							        </div>
-							        
-							        <!-- Quick Stats Below Images -->
-							        <div class="quick-stats">
-							            <div class="stat-item">
-							                <div class="stat-icon">🚀</div>
-							                <div class="stat-content">
-							                    <strong>80% Faster</strong>
-							                    <span>Processing speed</span>
-							                </div>
-							            </div>
-							            <div class="stat-item">
-							                <div class="stat-icon">💰</div>
-							                <div class="stat-content">
-							                    <strong>45% Savings</strong>
-							                    <span>Operational costs</span>
-							                </div>
-							            </div>
-							            <div class="stat-item">
-							                <div class="stat-icon">🎯</div>
-							                <div class="stat-content">
-							                    <strong>99.7% Accuracy</strong>
-							                    <span>Error-free results</span>
-							                </div>
-							            </div>
-							        </div>
-							    </div>
-							</section>
-							
-							<!-- Panel - Voice Agents Teaser -->
-							<section class="panel color3">
-							    <div class="intro joined">
-							        <h2 class="major">🚀 Next-Gen Voice Agents</h2>
-							        <p><strong>Coming Soon:</strong> Intelligent voice automation that understands context and provides 24/7 customer support.</p>
-							        <ul class="actions">
-							            <li><a href="#contact" class="button primary color1">Get Early Access</a></li>
-							        </ul>
-							    </div>
-							    <div class="inner">
-							        <ul class="grid-icons three connected">
-							            <li><span class="icon solid fa-microphone"><span class="label">Natural Conversations</span></span></li>
-							            <li><span class="icon solid fa-brain"><span class="label">AI-Powered</span></span></li>
-							            <li><span class="icon solid fa-clock"><span class="label">24/7 Availability</span></span></li>
-							        </ul>
-							    </div>
-							</section>
-							
-							<!-- Panel - Get Started -->
-							<section class="panel color4-alt" id="contact">
-							    <div class="intro color4">
-							        <h2 class="major">Get Started</h2>
-							        <p>Ready to transform your business with automation? Contact us for a free consultation.</p>
-							    </div>
-							    <div class="inner columns divided">
-							        <div class="span-3-25">
-							            <form method="post" action="#">
-							                <div class="fields">
-							                    <div class="field half">
-							                        <label for="name">Name</label>
-							                        <input type="text" name="name" id="name" placeholder="Your Name" />
-							                    </div>
-							                    <div class="field half">
-							                        <label for="email">Email</label>
-							                        <input type="email" name="email" id="email" placeholder="your.email@company.com" />
-							                    </div>
-							                    <div class="field">
-							                        <label for="message">How can we help?</label>
-							                        <textarea name="message" id="message" rows="4" placeholder="Tell us about your automation needs..."></textarea>
-							                    </div>
-							                </div>
-							                <ul class="actions">
-							                    <li><input type="submit" value="Start Your Automation Journey" class="button primary" /></li>
-							                </ul>
-							            </form>
-							        </div>
-							        <div class="span-1-5">
-							            <ul class="contact-icons color1">
-							                <li class="icon solid fa-envelope"><a href="mailto:contact@biblizzard.work">contact@biblizzard.work</a></li>
-							                <li class="icon solid fa-phone"><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-							                <li class="icon brands fa-linkedin"><a href="#">LinkedIn</a></li>
-							            </ul>
-							        </div>
-							    </div>
-							</section>
-					<!-- Panel - Voice Agents Teaser -->
-						<section class="panel color3">
-  						  <div class="intro joined">
-     						   <h2 class="major">🚀 Next-Gen Voice Agents</h2>
-     						   <p><strong>Coming Soon:</strong> Intelligent voice automation that understands context, handles complex queries, and provides 24/7 customer support. Transform your customer experience with AI-powered voice agents that sound human and solve problems efficiently.</p>
-     						   <ul class="actions">
-          					  <li><a href="#contact" class="button primary color1">Get Early Access</a></li>
-     						   </ul>
-  						  </div>
-  						  <div class="inner">
-      						  <ul class="grid-icons three connected">
-          						  <li><span class="icon solid fa-microphone"><span class="label">Natural Conversations</span></span></li>
-          						  <li><span class="icon solid fa-brain"><span class="label">AI-Powered</span></span></li>
-						            <li><span class="icon solid fa-clock"><span class="label">24/7 Availability</span></span></li>
-          						  <li><span class="icon solid fa-users"><span class="label">Multi-language</span></span></li>
-         						   <li><span class="icon solid fa-chart-line"><span class="label">Performance Analytics</span></span></li>
-           							 <li><span class="icon solid fa-shield-alt"><span class="label">Secure & Compliant</span></span></li>
-       							 </ul>
-  							  </div>
-						</section>
-						<!-- Panel -->
-						<section class="panel color4-alt">
- 							   <div class="intro color4">
-       							 <h2 class="major">Get Started</h2>
-       							 <p>Ready to transform your business with automation? Contact us for a free consultation and discover how we can streamline your operations and boost your productivity.</p>
-  							  </div>
-  							  <div class="inner columns divided">
-      						  <div class="span-3-25">
-          								  <form method="post" action="#">
-              					  <div class="fields">
-                  				  <div class="field half">
-                     				   <label for="name">Name</label>
-				                        <input type="text" name="name" id="name" placeholder="Your Name" />
-                  				  </div>
-                   				 <div class="field half">
-                     				   <label for="email">Email</label>
-                    				    <input type="email" name="email" id="email" placeholder="your.email@company.com" />
-                 				   </div>
-                 				   <div class="field">
-                       				 <label for="message">How can we help?</label>
-                     				   <textarea name="message" id="message" rows="4" placeholder="Tell us about your automation needs..."></textarea>
-                  				  </div>
-              					  </div>
-              					  <ul class="actions">
-                 					   <li><input type="submit" value="Start Your Automation Journey" class="button primary" /></li>
-            				    </ul>
-         					   </form>
-      						  </div>
-    						    <div class="span-1-5">
-         						   <ul class="contact-icons color1">
-              						  <li class="icon solid fa-envelope"><a href="mailto:contact@biblizzard.work">contact@biblizzard.work</a></li>
-             						   <li class="icon solid fa-phone"><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-              						  <li class="icon brands fa-linkedin"><a href="#">linkedin.com/company</a></li>
-              						  <li class="icon brands fa-twitter"><a href="#">@automationalchemy</a></li>
-       						     </ul>
-     						   </div>
-  							  </div>
-							</section>
-						<!-- Panel -->
-							<!-- Panel - Workflow Automation Benefits -->
-						<section class="panel color2-alt">
-						    <div class="intro color2">
-						        <h2 class="major">Why Automate Your Workflows?</h2>
-						        <p>Workflow automation isn't just about saving time—it's about transforming how your business operates. Here's what you gain:</p>
-						    </div>
-						    <div class="inner columns aligned">
-						        <div class="span-3">
-						            <h3>🚀 Efficiency Boost</h3>
-						            <p>Complete tasks in minutes instead of hours. Automate repetitive processes and free your team for strategic work.</p>
-						            
-						            <h3>💰 Cost Reduction</h3>
-						            <p>Reduce operational costs by eliminating manual labor and minimizing errors that lead to expensive corrections.</p>
-						            
-						            <h3>📈 Scalability</h3>
-						            <p>Handle increased workload without proportional staff growth. Scale operations seamlessly as your business grows.</p>
-						        </div>
-						        <div class="span-3">
-						            <h3>🎯 Error Elimination</h3>
-						            <p>Automated workflows follow exact rules every time, eliminating human error and ensuring consistent quality.</p>
-						            
-						            <h3>📊 Better Insights</h3>
-						            <p>Gain visibility into process performance with detailed analytics and identify optimization opportunities.</p>
-						            
-						            <h3>😊 Employee Satisfaction</h3>
-						            <p>Free your team from boring, repetitive tasks and let them focus on creative, value-added work they enjoy.</p>
-						        </div>
-						    </div>
-						</section>
-						
-												<!-- Copyright -->
-													<div class="copyright">&copy; 2024 Automation Alchemy. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
-						
-											</div>
-						
+						<!-- PAGE 3: Results (Email Automation) -->
+						<section class="panel spotlight medium right">
+							<div class="content span-7">
+								<h2 class="major">Email Automation Results</h2>
+								<p>Transform your customer communication with intelligent email processing.</p>
+								
+								<div class="workflow-card">
+									<h3>📧 Smart Email Response</h3>
+									<div class="workflow-steps">
+										<div class="workflow-step">
+											<span class="step-icon">📥</span>
+											<span>Email received from customer</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">🤖</span>
+											<span>AI analyzes content & intent</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">✍️</span>
+											<span>Drafts personalized response</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">👤</span>
+											<span>Human reviews & approves</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">📤</span>
+											<span>Sends perfect response instantly</span>
+										</div>
 									</div>
-						
-								<!-- Scripts -->
-									<script src="assets/js/jquery.min.js"></script>
-									<script src="assets/js/browser.min.js"></script>
-									<script src="assets/js/breakpoints.min.js"></script>
-									<script src="assets/js/main.js"></script>
-						
-							</body>
-						
-						</html>
-						
-						
-						
+								</div>
 
+								<div class="compact-metrics" style="display: flex; justify-content: space-between; margin-top: 2rem;">
+									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">80%</div>
+										<div style="font-size: 0.9rem;">Faster Response Time</div>
+									</div>
+									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">15+</div>
+										<div style="font-size: 0.9rem;">Hours Saved Weekly</div>
+									</div>
+									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">99%</div>
+										<div style="font-size: 0.9rem;">Accuracy Rate</div>
+									</div>
+								</div>
+							</div>
+							<div class="image filtered tinted" data-position="top left">
+								<img src="images/pic02.jpg" alt="Email Automation" />
+							</div>
+						</section>
 
+						<!-- PAGE 4: Results (Form Submission) -->
+						<section class="panel spotlight large left">
+							<div class="content span-5">
+								<h2 class="major">Lead Management Results</h2>
+								<p>Automate your sales pipeline from first contact to booked appointment.</p>
+								
+								<div class="workflow-card">
+									<h3>📋 Intelligent Lead Processing</h3>
+									<div class="workflow-steps">
+										<div class="workflow-step">
+											<span class="step-icon">📝</span>
+											<span>Online form submitted</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">🤖</span>
+											<span>AI processes & validates data</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">📞</span>
+											<span>Automated call to client</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">🎯</span>
+											<span>AI qualifies lead potential</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">📅</span>
+											<span>Books appointment automatically</span>
+										</div>
+										<div class="step-arrow">↓</div>
+										<div class="workflow-step">
+											<span class="step-icon">🔄</span>
+											<span>Updates CRM & calendar</span>
+										</div>
+									</div>
+								</div>
 
+								<div class="compact-metrics" style="display: flex; justify-content: space-between; margin-top: 2rem;">
+									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">70%</div>
+										<div style="font-size: 0.9rem;">Faster Lead Response</div>
+									</div>
+									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">3x</div>
+										<div style="font-size: 0.9rem;">More Appointments</div>
+									</div>
+									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">24/7</div>
+										<div style="font-size: 0.9rem;">Lead Processing</div>
+									</div>
+								</div>
+							</div>
+							<div class="image filtered tinted" data-position="top right">
+								<img src="images/pic03.jpg" alt="Lead Management" />
+							</div>
+						</section>
+
+						<!-- PAGE 5: Automate Your Workflows -->
+						<section class="panel color2-alt">
+							<div class="intro color2">
+								<h2 class="major">Automate Your Workflows</h2>
+								<p>Workflow automation isn't just about saving time—it's about transforming how your business operates.</p>
+							</div>
+							<div class="inner">
+								<div class="benefits-grid">
+									<div class="benefit-item">
+										<div class="benefit-icon">🚀</div>
+										<h3>Efficiency Boost</h3>
+										<p>Complete tasks in minutes instead of hours. Automate repetitive processes and free your team for strategic work.</p>
+									</div>
+									<div class="benefit-item">
+										<div class="benefit-icon">💰</div>
+										<h3>Cost Reduction</h3>
+										<p>Reduce operational costs by eliminating manual labor and minimizing errors that lead to expensive corrections.</p>
+									</div>
+									<div class="benefit-item">
+										<div class="benefit-icon">📈</div>
+										<h3>Scalability</h3>
+										<p>Handle increased workload without proportional staff growth. Scale operations seamlessly as your business grows.</p>
+									</div>
+									<div class="benefit-item">
+										<div class="benefit-icon">🎯</div>
+										<h3>Error Elimination</h3>
+										<p>Automated workflows follow exact rules every time, eliminating human error and ensuring consistent quality.</p>
+									</div>
+									<div class="benefit-item">
+										<div class="benefit-icon">📊</div>
+										<h3>Better Insights</h3>
+										<p>Gain visibility into process performance with detailed analytics and identify optimization opportunities.</p>
+									</div>
+									<div class="benefit-item">
+										<div class="benefit-icon">⚡</div>
+										<h3>Employee Efficiency</h3>
+										<p>Boost team productivity by automating routine tasks, allowing focus on high-value strategic work.</p>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- PAGE 6: Get Started -->
+						<section class="panel color4-alt" id="contact">
+							<div class="intro color4">
+								<h2 class="major">Get Started</h2>
+								<p>Ready to transform your business with automation? Contact us for a free consultation.</p>
+							</div>
+							<div class="inner columns divided">
+								<div class="span-3-25">
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" placeholder="Your Name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="email" name="email" id="email" placeholder="your.email@company.com" />
+											</div>
+											<div class="field">
+												<label for="message">How can we help?</label>
+												<textarea name="message" id="message" rows="4" placeholder="Tell us about your automation needs..."></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Start Your Automation Journey" class="button primary" /></li>
+										</ul>
+									</form>
+								</div>
+								<div class="span-1-5">
+									<ul class="contact-icons color1">
+										<li class="icon solid fa-envelope"><a href="mailto:contact@biblizzard.work">contact@biblizzard.work</a></li>
+										<li class="icon solid fa-phone"><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+										<li class="icon brands fa-linkedin"><a href="#">LinkedIn</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<!-- Copyright -->
+						<div class="copyright">&copy; 2024 Automation Alchemy. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
