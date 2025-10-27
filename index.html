@@ -6,27 +6,80 @@
 -->
 <html>
 <style>
+    /* Main Header Colors - Amber Theme */
     .content .inner h1 {
-        color: #9370DB !important; /* Keep gold */
+        color: #9370DB !important; /* Keep purple for main title */
         text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
     .content .inner p {
-        color: #D8BFD8 !important; /* Lavender */
+        color: #FFA500 !important; /* Amber instead of silver */
         text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
     #nav ul li a {
         color: #FFFFFF !important;
-        border: 1px solid #9370DB; /* Purple border */
-        background-color: rgba(147, 112, 219, 0.2); /* Light purple background */
+        border: 1px solid #9370DB;
+        background-color: rgba(147, 112, 219, 0.2);
         padding: 8px 16px;
         border-radius: 4px;
     }
     #nav ul li a:hover {
-        background-color: #9370DB !important; /* Purple on hover */
+        background-color: #9370DB !important;
         color: #FFFFFF !important;
     }
     .icon.fa-gem {
-        color: #9370DB !important; /* Purple gem */
+        color: #9370DB !important;
+    }
+
+    /* Dynamic Section Colors */
+    /* Services Section - Coral */
+    #intro .major {
+        color: #FF6B6B !important;
+        border-bottom-color: #FF6B6B !important;
+    }
+    #intro .services-list h4 {
+        color: #FF6B6B !important;
+    }
+
+    /* Portfolio Section - Teal */
+    #work .major {
+        color: #4ECDC4 !important;
+        border-bottom-color: #4ECDC4 !important;
+    }
+    #work ul li strong {
+        color: #4ECDC4 !important;
+    }
+
+    /* About Section - Sky Blue */
+    #about .major {
+        color: #45B7D1 !important;
+        border-bottom-color: #45B7D1 !important;
+    }
+    #about ul li strong {
+        color: #45B7D1 !important;
+    }
+
+    /* Contact Section - Mint Green */
+    #contact .major {
+        color: #96CEB4 !important;
+        border-bottom-color: #96CEB4 !important;
+    }
+    #contact .primary {
+        background-color: #96CEB4 !important;
+        border-color: #96CEB4 !important;
+        color: #000000 !important;
+    }
+
+    /* Amber accents throughout */
+    a {
+        color: #FFA500 !important; /* Amber links */
+    }
+    a:hover {
+        color: #FF8C00 !important; /* Darker amber on hover */
+    }
+
+    /* Service icons in amber */
+    .services-list h4::before {
+        color: #FFA500 !important;
     }
 </style>
 	<head>
@@ -437,6 +490,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+
 
 
 
