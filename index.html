@@ -15,88 +15,45 @@
 		
 		<!-- Custom CSS for Automation Alchemy -->
 		<style>
-			/* Workflow Styles */
-			.workflow-showcase {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 1.5rem;
+			/* Horizontal Workflow Styles */
+			.horizontal-workflow {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 				margin: 2rem 0;
+				gap: 1rem;
 			}
 			
-			.workflow-card {
+			.horizontal-step {
+				text-align: center;
+				flex: 1;
+				padding: 1rem;
 				background: rgba(255,255,255,0.05);
 				border-radius: 10px;
-				padding: 1.5rem;
-				text-align: center;
 				border-top: 4px solid #4ECDC4;
 			}
 			
-			.workflow-steps {
-				display: flex;
-				flex-direction: column;
-				gap: 0.8rem;
-				margin: 1rem 0;
-			}
-			
-			.workflow-step {
-				display: flex;
-				align-items: center;
-				gap: 0.8rem;
-				padding: 0.8rem;
-				background: rgba(255,255,255,0.1);
-				border-radius: 6px;
-				font-size: 0.9rem;
-			}
-			
 			.step-icon {
-				font-size: 1.2rem;
-				min-width: 30px;
+				font-size: 2rem;
+				margin-bottom: 0.8rem;
+				display: block;
 			}
 			
 			.step-arrow {
-				font-size: 1rem;
-				color: #4ECDC4;
-				margin: 0 0.3rem;
-			}
-			
-			/* Dashboard Preview */
-			.dashboard-preview {
-				background: rgba(255,255,255,0.1);
-				border-radius: 10px;
-				padding: 1.5rem;
-				margin: 1.5rem 0;
-			}
-			
-			.dashboard-grid {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				gap: 1rem;
-				margin-top: 1rem;
-			}
-			
-			.dashboard-item {
-				background: rgba(255,255,255,0.05);
-				padding: 1rem;
-				border-radius: 6px;
-				text-align: center;
-			}
-			
-			.dashboard-metric {
 				font-size: 1.5rem;
-				font-weight: bold;
 				color: #4ECDC4;
-				margin-bottom: 0.5rem;
+				margin: 0 0.5rem;
 			}
 			
 			/* Benefits Grid */
-			.benefits-grid {
+			.benefits-grid-simple {
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
 				gap: 1.5rem;
 				margin: 2rem 0;
 			}
 			
-			.benefit-item {
+			.benefit-item-simple {
 				background: rgba(255,255,255,0.05);
 				padding: 1.5rem;
 				border-radius: 10px;
@@ -111,12 +68,16 @@
 			
 			/* Responsive */
 			@media (max-width: 736px) {
-				.workflow-showcase,
-				.benefits-grid {
-					grid-template-columns: 1fr;
+				.horizontal-workflow {
+					flex-direction: column;
 				}
 				
-				.dashboard-grid {
+				.step-arrow {
+					transform: rotate(90deg);
+					margin: 0.5rem 0;
+				}
+				
+				.benefits-grid-simple {
 					grid-template-columns: 1fr;
 				}
 			}
@@ -165,51 +126,38 @@
 						<!-- PAGE 3: Results (Email Automation) -->
 						<section class="panel spotlight medium right">
 							<div class="content span-7">
-								<h2 class="major">Email Automation Results</h2>
-								<p>Transform your customer communication with intelligent email processing.</p>
+								<h2 class="major">Email Automation Process</h2>
+								<p>Intelligent email processing that handles customer inquiries automatically.</p>
 								
-								<div class="workflow-card">
-									<h3>📧 Smart Email Response</h3>
-									<div class="workflow-steps">
-										<div class="workflow-step">
-											<span class="step-icon">📥</span>
-											<span>Email received from customer</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">🤖</span>
-											<span>AI analyzes content & intent</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">✍️</span>
-											<span>Drafts personalized response</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">👤</span>
-											<span>Human reviews & approves</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">📤</span>
-											<span>Sends perfect response instantly</span>
-										</div>
+								<div class="horizontal-workflow">
+									<div class="horizontal-step">
+										<span class="step-icon">📥</span>
+										<strong>Email Received</strong>
+										<p>Customer inquiry arrives</p>
 									</div>
-								</div>
-
-								<div class="compact-metrics" style="display: flex; justify-content: space-between; margin-top: 2rem;">
-									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">80%</div>
-										<div style="font-size: 0.9rem;">Faster Response Time</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">🤖</span>
+										<strong>AI Analysis</strong>
+										<p>Content analysis & classification</p>
 									</div>
-									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">15+</div>
-										<div style="font-size: 0.9rem;">Hours Saved Weekly</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">✍️</span>
+										<strong>Response Draft</strong>
+										<p>Personalized response created</p>
 									</div>
-									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">99%</div>
-										<div style="font-size: 0.9rem;">Accuracy Rate</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">👤</span>
+										<strong>Human Approval</strong>
+										<p>Quick review & confirmation</p>
+									</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">📤</span>
+										<strong>Send Response</strong>
+										<p>Instant delivery to customer</p>
 									</div>
 								</div>
 							</div>
@@ -221,56 +169,38 @@
 						<!-- PAGE 4: Results (Form Submission) -->
 						<section class="panel spotlight large left">
 							<div class="content span-5">
-								<h2 class="major">Lead Management Results</h2>
-								<p>Automate your sales pipeline from first contact to booked appointment.</p>
+								<h2 class="major">Lead Management Process</h2>
+								<p>Automated lead processing from submission to appointment booking.</p>
 								
-								<div class="workflow-card">
-									<h3>📋 Intelligent Lead Processing</h3>
-									<div class="workflow-steps">
-										<div class="workflow-step">
-											<span class="step-icon">📝</span>
-											<span>Online form submitted</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">🤖</span>
-											<span>AI processes & validates data</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">📞</span>
-											<span>Automated call to client</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">🎯</span>
-											<span>AI qualifies lead potential</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">📅</span>
-											<span>Books appointment automatically</span>
-										</div>
-										<div class="step-arrow">↓</div>
-										<div class="workflow-step">
-											<span class="step-icon">🔄</span>
-											<span>Updates CRM & calendar</span>
-										</div>
+								<div class="horizontal-workflow">
+									<div class="horizontal-step">
+										<span class="step-icon">📝</span>
+										<strong>Form Submission</strong>
+										<p>Lead information received</p>
 									</div>
-								</div>
-
-								<div class="compact-metrics" style="display: flex; justify-content: space-between; margin-top: 2rem;">
-									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">70%</div>
-										<div style="font-size: 0.9rem;">Faster Lead Response</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">🤖</span>
+										<strong>AI Processing</strong>
+										<p>Data validation & analysis</p>
 									</div>
-									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">3x</div>
-										<div style="font-size: 0.9rem;">More Appointments</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">📞</span>
+										<strong>Client Call</strong>
+										<p>Automated qualification call</p>
 									</div>
-									<div class="metric-box" style="text-align: center; flex: 1; padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
-										<div style="font-size: 1.8rem; font-weight: bold; color: #4ECDC4; margin-bottom: 0.5rem;">24/7</div>
-										<div style="font-size: 0.9rem;">Lead Processing</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">🎯</span>
+										<strong>Lead Qualification</strong>
+										<p>Potential assessment</p>
+									</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">📅</span>
+										<strong>Book Appointment</strong>
+										<p>Schedule meeting automatically</p>
 									</div>
 								</div>
 							</div>
@@ -283,39 +213,29 @@
 						<section class="panel color2-alt">
 							<div class="intro color2">
 								<h2 class="major">Automate Your Workflows</h2>
-								<p>Workflow automation isn't just about saving time—it's about transforming how your business operates.</p>
+								<p>Transform your business operations with intelligent automation solutions.</p>
 							</div>
 							<div class="inner">
-								<div class="benefits-grid">
-									<div class="benefit-item">
+								<div class="benefits-grid-simple">
+									<div class="benefit-item-simple">
 										<div class="benefit-icon">🚀</div>
 										<h3>Efficiency Boost</h3>
 										<p>Complete tasks in minutes instead of hours. Automate repetitive processes and free your team for strategic work.</p>
 									</div>
-									<div class="benefit-item">
-										<div class="benefit-icon">💰</div>
-										<h3>Cost Reduction</h3>
-										<p>Reduce operational costs by eliminating manual labor and minimizing errors that lead to expensive corrections.</p>
-									</div>
-									<div class="benefit-item">
-										<div class="benefit-icon">📈</div>
-										<h3>Scalability</h3>
-										<p>Handle increased workload without proportional staff growth. Scale operations seamlessly as your business grows.</p>
-									</div>
-									<div class="benefit-item">
+									<div class="benefit-item-simple">
 										<div class="benefit-icon">🎯</div>
 										<h3>Error Elimination</h3>
 										<p>Automated workflows follow exact rules every time, eliminating human error and ensuring consistent quality.</p>
 									</div>
-									<div class="benefit-item">
+									<div class="benefit-item-simple">
 										<div class="benefit-icon">📊</div>
 										<h3>Better Insights</h3>
 										<p>Gain visibility into process performance with detailed analytics and identify optimization opportunities.</p>
 									</div>
-									<div class="benefit-item">
-										<div class="benefit-icon">⚡</div>
-										<h3>Employee Efficiency</h3>
-										<p>Boost team productivity by automating routine tasks, allowing focus on high-value strategic work.</p>
+									<div class="benefit-item-simple">
+										<div class="benefit-icon">📈</div>
+										<h3>Scalability</h3>
+										<p>Handle increased workload without proportional staff growth. Scale operations seamlessly as your business grows.</p>
 									</div>
 								</div>
 							</div>
@@ -374,4 +294,3 @@
 
 	</body>
 </html>
-
