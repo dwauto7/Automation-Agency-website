@@ -94,6 +94,111 @@
 				            margin: 1rem 0;
 				            line-height: 1.6;
 				        }
+						/* Case Studies Grid Layout */
+						.case-studies-grid {
+						    display: grid;
+						    grid-template-columns: repeat(2, 1fr);
+						    gap: 2rem;
+						    margin: 2rem 0;
+						}
+						
+						.case-study {
+						    background: rgba(255,255,255,0.05);
+						    padding: 1.5rem;
+						    border-radius: 10px;
+						    border-left: 4px solid #4ECDC4;
+						    transition: transform 0.3s ease;
+						}
+						
+						.case-study:hover {
+						    transform: translateY(-5px);
+						}
+						
+						.case-stats {
+						    display: flex;
+						    justify-content: space-around;
+						    margin: 1rem 0;
+						}
+						
+						.stat {
+						    text-align: center;
+						}
+						
+						.stat strong {
+						    display: block;
+						    font-size: 1.8rem;
+						    color: #4ECDC4;
+						}
+						
+						.stat span {
+						    font-size: 0.9rem;
+						    opacity: 0.8;
+						}
+						
+						.case-content p {
+						    margin: 0.8rem 0;
+						    line-height: 1.5;
+						    font-size: 0.95rem;
+						}
+						
+						/* Image Grid Layout */
+						.image-grid {
+						    display: grid;
+						    grid-template-columns: repeat(2, 1fr);
+						    gap: 2rem;
+						    margin: 2rem 0;
+						}
+						
+						.image-item {
+						    position: relative;
+						    border-radius: 10px;
+						    overflow: hidden;
+						    background: rgba(255,255,255,0.1);
+						    transition: transform 0.3s ease;
+						}
+						
+						.image-item:hover {
+						    transform: scale(1.05);
+						}
+						
+						.image-item img {
+						    width: 100%;
+						    height: 200px;
+						    object-fit: cover;
+						}
+						
+						.image-caption {
+						    padding: 1rem;
+						    text-align: center;
+						}
+						
+						.image-caption h4 {
+						    margin-bottom: 0.5rem;
+						    color: #fff;
+						}
+						
+						.image-caption p {
+						    font-size: 0.9rem;
+						    opacity: 0.8;
+						    margin: 0;
+						}
+						
+						/* Responsive Design */
+						@media (max-width: 736px) {
+						    .case-studies-grid,
+						    .image-grid {
+						        grid-template-columns: 1fr;
+						    }
+						    
+						    .workflow-steps {
+						        flex-direction: column;
+						    }
+						    
+						    .step-arrow {
+						        transform: rotate(90deg);
+						        margin: 1rem 0;
+						    }
+						}
 				    </style>
 				</head>
 	<body class="is-preload">
@@ -199,99 +304,42 @@
 							    </div>
 							</section>
 						<!-- Panel -->
-						<!-- Panel - Client Success Stories -->
-							<section class="panel">
-							    <div class="intro color2">
-							        <h2 class="major">Client Success Stories</h2>
-							        <p>See how we've transformed businesses across industries with intelligent automation solutions that deliver real results and measurable ROI.</p>
+						<!-- Panel - Our Work in Action -->
+							<section class="panel color1">
+							    <div class="intro color1">
+							        <h2 class="major">Our Work in Action</h2>
+							        <p>Visual examples of automation solutions transforming business operations across different industries.</p>
 							    </div>
-							    
 							    <div class="inner">
-							        <!-- Case Study 1 -->
-							        <div class="case-study">
-							            <h3>🏪 E-commerce Retailer</h3>
-							            <div class="case-content">
-							                <div class="case-stats">
-							                    <div class="stat">
-							                        <strong>80%</strong>
-							                        <span>Faster Order Processing</span>
-							                    </div>
-							                    <div class="stat">
-							                        <strong>45%</strong>
-							                        <span>Cost Reduction</span>
-							                    </div>
-							                    <div class="stat">
-							                        <strong>99.9%</strong>
-							                        <span>Accuracy Rate</span>
-							                    </div>
+							        <div class="image-grid">
+							            <div class="image-item">
+							                <img src="images/gallery/thumbs/01.jpg" alt="Dashboard Automation" />
+							                <div class="image-caption">
+							                    <h4>📊 Dashboard Automation</h4>
+							                    <p>Real-time business intelligence with automated reporting</p>
 							                </div>
-							                <p><strong>Challenge:</strong> Manual order processing took 4+ hours daily with frequent errors in inventory updates and customer communications.</p>
-							                <p><strong>Solution:</strong> Automated order fulfillment workflow integrating Shopify, QuickBooks, and shipping platforms with real-time inventory sync.</p>
-							                <p><strong>Result:</strong> Orders now process automatically in minutes, with zero data entry errors and automated customer notifications.</p>
 							            </div>
-							        </div>
-							
-							        <!-- Case Study 2 -->
-							        <div class="case-study">
-							            <h3>🏢 Financial Services</h3>
-							            <div class="case-content">
-							                <div class="case-stats">
-							                    <div class="stat">
-							                        <strong>70%</strong>
-							                        <span>Faster Onboarding</span>
-							                    </div>
-							                    <div class="stat">
-							                        <strong>50%</strong>
-							                        <span>Reduced Manual Work</span>
-							                    </div>
-							                    <div class="stat">
-							                        <strong>100%</strong>
-							                        <span>Compliance Audit Ready</span>
-							                    </div>
+							            <div class="image-item">
+							                <img src="images/gallery/thumbs/02.jpg" alt="Workflow Management" />
+							                <div class="image-caption">
+							                    <h4>⚡ Workflow Management</h4>
+							                    <p>Seamless process automation across multiple systems</p>
 							                </div>
-							                <p><strong>Challenge:</strong> Client onboarding took 5-7 days with multiple manual checks, document processing, and compliance verification.</p>
-							                <p><strong>Solution:</strong> End-to-end automation of KYC process with document validation, background checks, and compliance reporting.</p>
-							                <p><strong>Result:</strong> Onboarding completed in 24 hours with full audit trails and automated compliance documentation.</p>
 							            </div>
-							        </div>
-							
-							        <!-- Case Study 3 -->
-							        <div class="case-study">
-							            <h3>🏥 Healthcare Provider</h3>
-							            <div class="case-content">
-							                <div class="case-stats">
-							                    <div class="stat">
-							                        <strong>60%</strong>
-							                        <span>Faster Claims Processing</span>
-							                    </div>
-							                    <div class="stat">
-							                        <strong>85%</strong>
-							                        <span>Reduced Denials</span>
-							                    </div>
-							                    <div class="stat">
-							                        <strong>HIPAA</strong>
-							                        <span>Compliant</span>
-							                    </div>
+							            <div class="image-item">
+							                <img src="images/gallery/thumbs/03.jpg" alt="Data Integration" />
+							                <div class="image-caption">
+							                    <h4>🔗 Data Integration</h4>
+							                    <p>Connecting disparate systems for unified operations</p>
 							                </div>
-							                <p><strong>Challenge:</strong> Insurance claims processing was error-prone with 30% denial rates due to missing information and coding errors.</p>
-							                <p><strong>Solution:</strong> AI-powered claims validation system that checks completeness, coding accuracy, and compliance before submission.</p>
-							                <p><strong>Result:</strong> Near-instant claims validation with dramatic reduction in denials and faster reimbursement cycles.</p>
 							            </div>
-							        </div>
-							    </div>
-							
-							    <!-- Keep some gallery images for visual appeal -->
-							    <div class="gallery">
-							        <div class="group span-3">
-							            <a href="images/gallery/fulls/01.jpg" class="image filtered span-3" data-position="bottom">
-							                <img src="images/gallery/thumbs/01.jpg" alt="E-commerce Automation" />
-							            </a>
-							            <a href="images/gallery/fulls/02.jpg" class="image filtered span-1-5" data-position="center">
-							                <img src="images/gallery/thumbs/02.jpg" alt="CRM Automation" />
-							            </a>
-							            <a href="images/gallery/fulls/03.jpg" class="image filtered span-1-5" data-position="bottom">
-							                <img src="images/gallery/thumbs/03.jpg" alt="Data Migration" />
-							            </a>
+							            <div class="image-item">
+							                <img src="images/gallery/thumbs/04.jpg" alt="AI Processing" />
+							                <div class="image-caption">
+							                    <h4>🤖 AI Processing</h4>
+							                    <p>Intelligent document processing and analysis</p>
+							                </div>
+							            </div>
 							        </div>
 							    </div>
 							</section>
@@ -403,3 +451,4 @@
 						
 						
 						
+
