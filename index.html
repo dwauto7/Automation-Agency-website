@@ -8,77 +8,111 @@
 <style>
     /* Main Header Colors - Blue Theme */
     .content .inner h1 {
-        color: #2E86AB !important; /* Professional blue */
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        color: #0077B6 !important; /* Brighter, bolder blue */
+        text-shadow: 2px 2px 12px rgba(0, 119, 182, 0.4);
+        font-weight: 700;
     }
     .content .inner p {
-        color: #A8D0E6 !important; /* Light blue - clean & modern */
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-        font-size: 1.1em;
+        color: #CAF0F8 !important; /* Much brighter light blue */
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+        font-size: 1.2em;
+        font-weight: 500;
     }
     #nav ul li a {
         color: #FFFFFF !important;
-        border: 1px solid #2E86AB; /* Blue border */
-        background-color: rgba(46, 134, 171, 0.15);
-        padding: 8px 16px;
-        border-radius: 4px;
+        border: 2px solid #0077B6; /* Thicker border */
+        background-color: rgba(0, 119, 182, 0.25); /* More visible */
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 1.1em;
     }
     #nav ul li a:hover {
-        background-color: #2E86AB !important;
+        background-color: #0077B6 !important;
         color: #FFFFFF !important;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(46, 134, 171, 0.3);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 119, 182, 0.4);
     }
     .icon.fa-gem {
-        color: #2E86AB !important; /* Blue gem */
+        color: #0077B6 !important;
+        font-size: 1.5em;
     }
 
-    /* Dynamic Section Colors */
-    /* Services Section - Coral/Orange */
+    /* Dynamic Section Colors - BRIGHTER & BOLDER */
+    /* Services Section - Vibrant Orange (instead of red) */
     #intro .major {
-        color: #FF7B54 !important;
-        border-bottom-color: #FF7B54 !important;
+        color: #FF6B35 !important; /* Bright orange */
+        border-bottom-color: #FF6B35 !important;
+        border-bottom-width: 3px;
+        font-weight: 700;
     }
     #intro .services-list h4 {
-        color: #FF7B54 !important;
+        color: #FF6B35 !important;
+        font-weight: 600;
+        font-size: 1.3em;
     }
 
-    /* Portfolio Section - Teal */
+    /* Portfolio Section - Electric Teal */
     #work .major {
-        color: #00A8A8 !important;
-        border-bottom-color: #00A8A8 !important;
+        color: #00CED1 !important; /* Bright teal */
+        border-bottom-color: #00CED1 !important;
+        border-bottom-width: 3px;
+        font-weight: 700;
     }
     #work ul li strong {
-        color: #00A8A8 !important;
+        color: #00CED1 !important;
+        font-weight: 600;
     }
 
-    /* About Section - Emerald Green */
+    /* About Section - Vibrant Green */
     #about .major {
-        color: #2E8B57 !important;
-        border-bottom-color: #2E8B57 !important;
+        color: #32CD32 !important; /* Lime green */
+        border-bottom-color: #32CD32 !important;
+        border-bottom-width: 3px;
+        font-weight: 700;
     }
     #about ul li strong {
-        color: #2E8B57 !important;
+        color: #32CD32 !important;
+        font-weight: 600;
     }
 
-    /* Contact Section - Royal Purple */
+    /* Contact Section - Bright Purple */
     #contact .major {
-        color: #6A0DAD !important;
-        border-bottom-color: #6A0DAD !important;
+        color: #9370DB !important; /* Medium purple */
+        border-bottom-color: #9370DB !important;
+        border-bottom-width: 3px;
+        font-weight: 700;
     }
     #contact .primary {
-        background-color: #6A0DAD !important;
-        border-color: #6A0DAD !important;
+        background-color: #9370DB !important;
+        border-color: #9370DB !important;
         color: #FFFFFF !important;
+        font-weight: 600;
+        font-size: 1.1em;
     }
 
-    /* Links and interactive elements */
+    /* Enhanced links and interactive elements */
     a {
-        color: #2E86AB !important;
+        color: #0077B6 !important;
+        font-weight: 500;
     }
     a:hover {
-        color: #1B5E7A !important;
+        color: #005B8A !important;
         text-decoration: none !important;
+        text-shadow: 0 0 8px rgba(0, 119, 182, 0.3);
+    }
+
+    /* Make service icons more visible */
+    .services-list h4::before {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+
+    /* Enhanced text visibility */
+    .services-list p, #work p, #about p, #contact p {
+        color: #E8F4F8 !important; /* Brighter text in modals */
+        font-weight: 400;
+        line-height: 1.6;
     }
 
     /* Smooth transitions */
@@ -535,6 +569,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 </script>
 	</body>
 </html>
+
 
 
 
