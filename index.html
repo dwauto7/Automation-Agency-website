@@ -6,80 +6,85 @@
 -->
 <html>
 <style>
-    /* Main Header Colors - Amber Theme */
+    /* Main Header Colors - Blue Theme */
     .content .inner h1 {
-        color: #9370DB !important; /* Keep purple for main title */
-        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        color: #2E86AB !important; /* Professional blue */
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
     .content .inner p {
-        color: #FFA500 !important; /* Amber instead of silver */
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        color: #A8D0E6 !important; /* Light blue - clean & modern */
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+        font-size: 1.1em;
     }
     #nav ul li a {
         color: #FFFFFF !important;
-        border: 1px solid #9370DB;
-        background-color: rgba(147, 112, 219, 0.2);
+        border: 1px solid #2E86AB; /* Blue border */
+        background-color: rgba(46, 134, 171, 0.15);
         padding: 8px 16px;
         border-radius: 4px;
     }
     #nav ul li a:hover {
-        background-color: #9370DB !important;
+        background-color: #2E86AB !important;
         color: #FFFFFF !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(46, 134, 171, 0.3);
     }
     .icon.fa-gem {
-        color: #9370DB !important;
+        color: #2E86AB !important; /* Blue gem */
     }
 
     /* Dynamic Section Colors */
-    /* Services Section - Coral */
+    /* Services Section - Coral/Orange */
     #intro .major {
-        color: #FF6B6B !important;
-        border-bottom-color: #FF6B6B !important;
+        color: #FF7B54 !important;
+        border-bottom-color: #FF7B54 !important;
     }
     #intro .services-list h4 {
-        color: #FF6B6B !important;
+        color: #FF7B54 !important;
     }
 
     /* Portfolio Section - Teal */
     #work .major {
-        color: #4ECDC4 !important;
-        border-bottom-color: #4ECDC4 !important;
+        color: #00A8A8 !important;
+        border-bottom-color: #00A8A8 !important;
     }
     #work ul li strong {
-        color: #4ECDC4 !important;
+        color: #00A8A8 !important;
     }
 
-    /* About Section - Sky Blue */
+    /* About Section - Emerald Green */
     #about .major {
-        color: #45B7D1 !important;
-        border-bottom-color: #45B7D1 !important;
+        color: #2E8B57 !important;
+        border-bottom-color: #2E8B57 !important;
     }
     #about ul li strong {
-        color: #45B7D1 !important;
+        color: #2E8B57 !important;
     }
 
-    /* Contact Section - Mint Green */
+    /* Contact Section - Royal Purple */
     #contact .major {
-        color: #96CEB4 !important;
-        border-bottom-color: #96CEB4 !important;
+        color: #6A0DAD !important;
+        border-bottom-color: #6A0DAD !important;
     }
     #contact .primary {
-        background-color: #96CEB4 !important;
-        border-color: #96CEB4 !important;
-        color: #000000 !important;
+        background-color: #6A0DAD !important;
+        border-color: #6A0DAD !important;
+        color: #FFFFFF !important;
     }
 
-    /* Amber accents throughout */
+    /* Links and interactive elements */
     a {
-        color: #FFA500 !important; /* Amber links */
+        color: #2E86AB !important;
     }
     a:hover {
-        color: #FF8C00 !important; /* Darker amber on hover */
+        color: #1B5E7A !important;
+        text-decoration: none !important;
     }
 
-    /* Service icons in amber */
-    .services-list h4::before {
-        color: #FFA500 !important;
+    /* Smooth transitions */
+    .major, .services-list h4, #work ul li strong, #about ul li strong,
+    #nav ul li a, a, .primary {
+        transition: all 0.3s ease-in-out;
     }
 </style>
 	<head>
@@ -530,6 +535,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 </script>
 	</body>
 </html>
+
 
 
 
