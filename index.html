@@ -1,252 +1,298 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Automation Process</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .panel {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 8px;
-            height: 100%;
-            background: linear-gradient(to bottom, #4A00E0, #8E2DE2);
-        }
-        
-        h2.major {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 30px;
-            max-width: 800px;
-        }
-        
-        .horizontal-workflow {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            padding: 20px 0;
-            gap: 10px;
-        }
-        
-        .horizontal-step {
-            flex: 0 0 auto;
-            width: 180px;
-            text-align: center;
-            padding: 20px 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .horizontal-step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .step-icon {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-        
-        .horizontal-step strong {
-            display: block;
-            font-size: 1.1rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        
-        .horizontal-step p {
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            margin: 0;
-            line-height: 1.4;
-        }
-        
-        .step-arrow {
-            font-size: 2rem;
-            color: #3498db;
-            margin: 40px 5px 0;
-            flex: 0 0 auto;
-        }
-        
-        .stats-container {
-            display: flex;
-            justify-content: flex-start;
-            gap: 20px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-        
-        .stat-box {
-            background: linear-gradient(135deg, #3498db, #2c3e50);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            min-width: 180px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            margin-top: 5px;
-        }
-        
-        @media (max-width: 768px) {
-            .horizontal-workflow {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .horizontal-step {
-                width: 100%;
-                margin-bottom: 15px;
-                text-align: left;
-                display: flex;
-                align-items: center;
-            }
-            
-            .step-icon {
-                margin-right: 15px;
-                margin-bottom: 0;
-                font-size: 2rem;
-            }
-            
-            .step-arrow {
-                display: none;
-            }
-            
-            .stats-container {
-                flex-direction: column;
-            }
-            
-            h2.major {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- PAGE 3: Results (Email Automation) -->
-        <section class="panel">
-            <div class="content">
-                <h2 class="major">Email Automation Process</h2>
-                <p>Intelligent email processing that handles customer inquiries automatically, reducing response time by 80% and increasing customer satisfaction.</p>
-                
-                <div class="horizontal-workflow">
-                    <div class="horizontal-step">
-                        <span class="step-icon">📥</span>
-                        <div>
-                            <strong>Email Received</strong>
-                            <p>Customer inquiry arrives in the system</p>
-                        </div>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="horizontal-step">
-                        <span class="step-icon">🤖</span>
-                        <div>
-                            <strong>AI Analysis</strong>
-                            <p>Content analysis & intent classification</p>
-                        </div>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="horizontal-step">
-                        <span class="step-icon">✍️</span>
-                        <div>
-                            <strong>Response Draft</strong>
-                            <p>Personalized response created automatically</p>
-                        </div>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="horizontal-step">
-                        <span class="step-icon">👤</span>
-                        <div>
-                            <strong>Human Approval</strong>
-                            <p>Quick review & confirmation by agent</p>
-                        </div>
-                    </div>
-                    <div class="step-arrow">→</div>
-                    <div class="horizontal-step">
-                        <span class="step-icon">📤</span>
-                        <div>
-                            <strong>Send Response</strong>
-                            <p>Instant delivery to customer</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="stats-container">
-                    <div class="stat-box">
-                        <span class="stat-number">80%</span>
-                        <span class="stat-label">Faster Response</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Availability</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">95%</span>
-                        <span class="stat-label">Satisfaction Rate</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">50%</span>
-                        <span class="stat-label">Cost Reduction</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</body>
+<!DOCTYPE HTML>
+<!--
+	Ethereal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Automation Alchemy - Efficient Automation Solutions</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Transform your business with intelligent automation solutions that save time and boost productivity" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<!-- Custom CSS for Automation Alchemy -->
+		<style>
+			/* Horizontal Workflow Styles */
+			.horizontal-workflow {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 2rem 0;
+				gap: 1rem;
+			}
+			
+			.horizontal-step {
+				text-align: center;
+				flex: 1;
+				padding: 1rem;
+				background: rgba(255,255,255,0.05);
+				border-radius: 10px;
+				border-top: 4px solid #4ECDC4;
+			}
+			
+			.step-icon {
+				font-size: 2rem;
+				margin-bottom: 0.8rem;
+				display: block;
+			}
+			
+			.step-arrow {
+				font-size: 1.5rem;
+				color: #4ECDC4;
+				margin: 0 0.5rem;
+			}
+			
+			/* Benefits Grid */
+			.benefits-grid-simple {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+				margin: 2rem 0;
+			}
+			
+			.benefit-item-simple {
+				background: rgba(255,255,255,0.05);
+				padding: 1.5rem;
+				border-radius: 10px;
+				text-align: center;
+				border-left: 4px solid #4ECDC4;
+			}
+			
+			.benefit-icon {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			
+			/* Responsive */
+			@media (max-width: 736px) {
+				.horizontal-workflow {
+					flex-direction: column;
+				}
+				
+				.step-arrow {
+					transform: rotate(90deg);
+					margin: 0.5rem 0;
+				}
+				
+				.benefits-grid-simple {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Wrapper -->
+					<div id="wrapper">
+
+						<!-- PAGE 1: Welcome -->
+						<section class="panel banner right">
+							<div class="content color0 span-3-75">
+								<h1 class="major">Welcome to<br />Automation Alchemy</h1>
+								<p>We transform complex business processes into <strong>streamlined automated workflows</strong>. Save time, reduce errors, and unlock new levels of productivity.</p>
+								<ul class="actions">
+									<li><a href="#services" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
+								</ul>
+							</div>
+							<div class="image filtered span-1-75" data-position="25% 25%">
+								<img src="images/pic01.jpg" alt="Automation Solutions" />
+							</div>
+						</section>
+						
+						<!-- PAGE 2: Our Services -->
+						<section class="panel color1" id="services">
+							<div class="intro joined">
+								<h2 class="major">Our Services</h2>
+								<p>We offer comprehensive automation solutions designed to transform how you work.</p>
+							</div>
+							<div class="inner">
+								<ul class="grid-icons three connected">
+									<li><span class="icon solid fa-cog"><span class="label">Workflow Automation</span></span></li>
+									<li><span class="icon solid fa-chart-line"><span class="label">Process Optimization</span></span></li>
+									<li><span class="icon solid fa-robot"><span class="label">AI Solutions</span></span></li>
+									<li><span class="icon solid fa-database"><span class="label">Data Management</span></span></li>
+									<li><span class="icon solid fa-cloud"><span class="label">Cloud Integration</span></span></li>
+									<li><span class="icon solid fa-code"><span class="label">Custom Development</span></span></li>
+								</ul>
+							</div>
+						</section>
+
+					<!-- PAGE 3: Results (Email Automation) -->
+                        <section class="panel spotlight large left">
+                            <div class="content span-7">
+                                <h2 class="major">Email Automation Process</h2>
+                                <p>Intelligent email processing that handles customer inquiries automatically.</p>
+                                
+                                <div class="horizontal-workflow">
+                                    <div class="horizontal-step">
+                                        <span class="step-icon">📥</span>
+                                        <strong>Email Received</strong>
+                                        <p>Customer inquiry arrives</p>
+                                    </div>
+                                    <div class="step-arrow">→</div>
+                                    <div class="horizontal-step">
+                                        <span class="step-icon">🤖</span>
+                                        <strong>AI Analysis</strong>
+                                        <p>Content analysis & classification</p>
+                                    </div>
+                                    <div class="step-arrow">→</div>
+                                    <div class="horizontal-step">
+                                        <span class="step-icon">✍️</span>
+                                        <strong>Response Draft</strong>
+                                        <p>Personalized response created</p>
+                                    </div>
+                                    <div class="step-arrow">→</div>
+                                    <div class="horizontal-step">
+                                        <span class="step-icon">👤</span>
+                                        <strong>Human Approval</strong>
+                                        <p>Quick review & confirmation</p>
+                                    </div>
+                                    <div class="step-arrow">→</div>
+                                    <div class="horizontal-step">
+                                        <span class="step-icon">📤</span>
+                                        <strong>Send Response</strong>
+                                        <p>Instant delivery to customer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image filtered tinted" data-position="top right">
+                                <img src="images/pic02.jpg" alt="Email Automation" />
+                            </div>
+                        </section>
+
+						<!-- PAGE 4: Results (Form Submission) -->
+						<section class="panel spotlight large left">
+							<div class="content span-5">
+								<h2 class="major">Lead Management Process</h2>
+								<p>Automated lead processing from submission to appointment booking.</p>
+								
+								<div class="horizontal-workflow">
+									<div class="horizontal-step">
+										<span class="step-icon">📝</span>
+										<strong>Form Submission</strong>
+										<p>Lead information received</p>
+									</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">🤖</span>
+										<strong>AI Processing</strong>
+										<p>Data validation & analysis</p>
+									</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">📞</span>
+										<strong>Client Call</strong>
+										<p>Automated qualification call</p>
+									</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">🎯</span>
+										<strong>Lead Qualification</strong>
+										<p>Potential assessment</p>
+									</div>
+									<div class="step-arrow">→</div>
+									<div class="horizontal-step">
+										<span class="step-icon">📅</span>
+										<strong>Book Appointment</strong>
+										<p>Schedule meeting automatically</p>
+									</div>
+								</div>
+							</div>
+							<div class="image filtered tinted" data-position="top right">
+								<img src="images/pic03.jpg" alt="Lead Management" />
+							</div>
+						</section>
+
+						<!-- PAGE 5: Automate Your Workflows -->
+						<section class="panel color2-alt">
+							<div class="intro color2">
+								<h2 class="major">Automate Your Workflows</h2>
+								<p>Transform your business operations with intelligent automation solutions.</p>
+							</div>
+							<div class="inner">
+								<div class="benefits-grid-simple">
+									<div class="benefit-item-simple">
+										<div class="benefit-icon">🚀</div>
+										<h3>Efficiency Boost</h3>
+										<p>Complete tasks in minutes instead of hours. Automate repetitive processes and free your team for strategic work.</p>
+									</div>
+									<div class="benefit-item-simple">
+										<div class="benefit-icon">🎯</div>
+										<h3>Error Elimination</h3>
+										<p>Automated workflows follow exact rules every time, eliminating human error and ensuring consistent quality.</p>
+									</div>
+									<div class="benefit-item-simple">
+										<div class="benefit-icon">📊</div>
+										<h3>Better Insights</h3>
+										<p>Gain visibility into process performance with detailed analytics and identify optimization opportunities.</p>
+									</div>
+									<div class="benefit-item-simple">
+										<div class="benefit-icon">📈</div>
+										<h3>Scalability</h3>
+										<p>Handle increased workload without proportional staff growth. Scale operations seamlessly as your business grows.</p>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- PAGE 6: Get Started -->
+						<section class="panel color4-alt" id="contact">
+							<div class="intro color4">
+								<h2 class="major">Get Started</h2>
+								<p>Ready to transform your business with automation? Contact us for a free consultation.</p>
+							</div>
+							<div class="inner columns divided">
+								<div class="span-3-25">
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" placeholder="Your Name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="email" name="email" id="email" placeholder="your.email@company.com" />
+											</div>
+											<div class="field">
+												<label for="message">How can we help?</label>
+												<textarea name="message" id="message" rows="4" placeholder="Tell us about your automation needs..."></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Start Your Automation Journey" class="button primary" /></li>
+										</ul>
+									</form>
+								</div>
+								<div class="span-1-5">
+									<ul class="contact-icons color1">
+										<li class="icon solid fa-envelope"><a href="mailto:contact@biblizzard.work">contact@biblizzard.work</a></li>
+										<li class="icon solid fa-phone"><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+										<li class="icon brands fa-linkedin"><a href="#">LinkedIn</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<!-- Copyright -->
+						<div class="copyright">&copy; 2024 Automation Alchemy.</div>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
+
+
